@@ -612,7 +612,7 @@ def add_profile_student_immunization(request, pk):
     template = 'hod_template/immunization.html'
     return render(request, template, context)
 
-@login_required
+# @login_required
 def add_staff(request):
     if request.method == "POST":
         form = AddStaffForm(request.POST, request.FILES)
@@ -646,7 +646,7 @@ def add_staff(request):
     return render(request, template, context)
 
 
-@login_required
+# @login_required
 def add_staff_education(request):
     if request.session['id']:
         try:
@@ -796,7 +796,7 @@ def staff_profile(request, pk):
     return render(request, template, context)
 
 
-@login_required
+# @login_required
 def manage_staff(request):
     staff_list = Staffs.objects.all().order_by('-id')
 

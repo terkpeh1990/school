@@ -1832,7 +1832,7 @@ def dashboard(request):
         'staff_list': staff_list,
         
     }
-    template = 'hod_template/dashboard.html'
+    template = 'hod_template/Dashboard.html'
     return render(request, template,context)
 
 @login_required

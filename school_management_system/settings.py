@@ -12,10 +12,14 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 
+import environ
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+env = environ.Env()
+environ.Env.read_env()
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -141,6 +145,6 @@ DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {'JPEG': ".jpg"}
 DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
 
 
-TWILIO_ACCOUNT_SID = 'AC3815c19ece09651e54479ce9c4d54f25'
-TWILIO_AUTH_TOKEN = '1116d3fd9be2af9c3a7dbac20bb4a44f'
-TWILIO_PHONE_NUMBER = '+16692020640'
+TWILIO_ACCOUNT_SID =env('SID')
+TWILIO_AUTH_TOKEN = env('TOKEN')
+TWILIO_PHONE_NUMBER =env('NUMBER')

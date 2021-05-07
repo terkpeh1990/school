@@ -760,7 +760,7 @@ def staffnexts(request):
             return redirect('school:manage_staff')
 
 
-@login_required
+# @login_required
 def staff_profile(request, pk):
     try:
         staff = Staffs.objects.get(id=pk)

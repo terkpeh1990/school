@@ -15,7 +15,7 @@ from django.utils.html import strip_tags
 from django.contrib.auth.decorators import login_required
 
 
-@login_required
+# @login_required
 def add_parent(request):
     if request.method == "POST":
         form = AddParentForm(request.POST)
@@ -44,7 +44,7 @@ def add_parent(request):
     template = 'hod_template/add_parent.html'
     return render(request, template, context)
 
-@login_required
+# @login_required
 def edit_parent(request, pk):
     par = Parents.objects.get(id = pk)
     if request.method == "POST":
@@ -62,7 +62,7 @@ def edit_parent(request, pk):
     template = 'hod_template/add_parent.html'
     return render(request, template, context)
 
-@login_required
+# @login_required
 def delete_parent(request, pk):
     par = Parents.objects.get(id=pk)
     try:
@@ -73,7 +73,7 @@ def delete_parent(request, pk):
         messages.error(request, "Failed to Delete Parent.")
         return redirect('school:manage_parent')
 
-@login_required
+# @login_required
 def manage_parent(request):
     parent_list = Parents.objects.all().order_by('-id')
     
@@ -84,7 +84,7 @@ def manage_parent(request):
     template = 'hod_template/manage_parent.html'
     return render(request, template, context)
 
-@login_required
+# @login_required
 def add_student(request,pk):
     pp =Parents.objects.get(id=pk)
     if request.method == "POST":
@@ -123,7 +123,7 @@ def add_student(request,pk):
     template = 'hod_template/add_student_template.html'
     return render(request, template, context)
 
-@login_required
+# @login_required
 def edit_student(request,pk):
     stud = Students.objects.get(id=pk)
     if request.method == "POST":
@@ -144,7 +144,7 @@ def edit_student(request,pk):
     template = 'hod_template/editstudent.html'
     return render(request, template, context)
 
-@login_required
+# @login_required
 def manage_student(request):
     student_list = Students.objects.all().order_by('-id')
 
@@ -155,7 +155,7 @@ def manage_student(request):
     template = 'hod_template/manage_student.html'
     return render(request, template, context)
 
-@login_required
+# @login_required
 def add_student_education(request):
     if request.session['id']:
         try:

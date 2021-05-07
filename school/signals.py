@@ -13,7 +13,7 @@ from django.contrib.sessions.models import Session
 from .import views
 from twilio.rest import TwilioRestClient
 from twilio.rest import Client
-from school_management_system.settings import TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_PHONE_NUMBER
+
 User = get_user_model()
 
 def staff_profile(sender,instance,created,**kwargs):

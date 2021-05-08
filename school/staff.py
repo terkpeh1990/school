@@ -454,7 +454,7 @@ def staff_dashboard(request):
         'attendance_list': attendance_list,
 
     }
-    template = 'staff_template/staffdashboard.html'
+    template = 'staff_template/staffDashboard.html'
     return render(request, template, context)
 
 

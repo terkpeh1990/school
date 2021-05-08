@@ -626,7 +626,7 @@ def add_staff(request):
                 message = client.messages.create(
                     to="+233" + staff.phone,
                     from_=TWILIO_PHONE_NUMBER,
-                    body="Dear" + " " + staff.Surname +" "+ staff.firstname + "," + " " + "your staff id is"+" " + staff.id + " " + "and your password is password@12345" + " "+ ".Thank you ---- MULAN SMART SCHOOL MANAGEMENT SYSTEM")
+                    body="Dear" + " " + staff.Surname + " " + staff.firstname + "," + " " + "your staff id is"+" " + staff.id + " " + "and your password is password@12345. Please note that you will be asked to change your password on your first login to https://msac-6j2j7.ondigitalocean.app . Thank you ---- MULAN SMART SCHOOL MANAGEMENT SYSTEM" )
             except IOError:
                 print('fail')
                 pass

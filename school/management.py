@@ -1848,11 +1848,11 @@ def reminders(request):
             message = client.messages.create(
                         to="+233" + par.father_phone,
                         from_=TWILIO_PHONE_NUMBER,
-                body="Dear" + " " + par.father_name + "," + " " + " A kindly reminder pay the remaining bill of " + " " + str(b.balance) + " " + "of your ward" + " " + b.student_id.Surname + " " + b.student_id.firstname)
+                body="Dear" + " " + par.father_name + "," + " " + " A kindly reminder to pay the remaining bill of " + " " + str(b.balance) + " " + "of your ward" + " " + b.student_id.Surname + " " + b.student_id.firstname)
             message = client.messages.create(
                         to="+233" + par.mother_phone,
                         from_=TWILIO_PHONE_NUMBER,
-                body="Dear" + " " + par.mother_name + "," + " " + " A kindly reminder pay the remaining bill of " + " " + str(b.balance) + " " + "of your ward" + " " + b.student_id.Surname + " " + b.student_id.firstname)
+                body="Dear" + " " + par.mother_name + "," + " " + " A kindly reminder to pay the remaining bill of " + " " + str(b.balance) + " " + "of your ward" + " " + b.student_id.Surname + " " + b.student_id.firstname)
         except IOError:
             pass
     messages.info(request,"Reminder Sent Succesfully")

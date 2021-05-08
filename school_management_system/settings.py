@@ -142,7 +142,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 MEDIA_URL = '/static/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 DJANGORESIZED_DEFAULT_SIZE = [128, 128]

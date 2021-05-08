@@ -26,11 +26,11 @@ def add_parent(request):
                 message = client.messages.create(
                     to="+233" + parent.father_phone,
                     from_=TWILIO_PHONE_NUMBER,
-                    body="Dear" + " " + parent.father_name + "," + " " + "Your username is:" + " " + "'" + parent.id+"'" + " " + "and password is: 'password@12345'. Please note that you will be asked to change your password on your first login.Thank you ---- MULAN SMART SCHOOL MANAGEMENT SYSTEM")
+                    body="Dear" + " " + parent.father_name + "," + " " + "Your username is:" + " " + "'" + parent.id+"'" + " " + "and password is: 'password@12345'. Please note that you will be asked to change your password on your first login to https://msac-6j2j7.ondigitalocean.app .Thank you ---- MULAN SMART SCHOOL MANAGEMENT SYSTEM")
                 message = client.messages.create(
                     to="+233" + parent.mother_phone,
                     from_=TWILIO_PHONE_NUMBER,
-                    body="Dear" + " " + parent.mother_name + "," + " " + "Your username is:" + " " + "'" + parent.id + "'" + " " + "and password is: 'password@12345'. Please note that you will be asked to change your password on your first login.Thank you ---- MULAN SMART SCHOOL MANAGEMENT SYSTEM")
+                    body="Dear" + " " + parent.mother_name + "," + " " + "Your username is:" + " " + "'" + parent.id + "'" + " " + "and password is: 'password@12345'. Please note that you will be asked to change your password on your first login to https://msac-6j2j7.ondigitalocean.app . Thank you ---- MULAN SMART SCHOOL MANAGEMENT SYSTEM")
             except IOError:
                 print('fail')
                 pass

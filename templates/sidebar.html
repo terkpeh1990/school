@@ -106,6 +106,16 @@
                 </a>
               </li>
               <li class="nav-item">
+                {% url 'school:viewing_results' as manage_resultss %}
+              
+                <a href="{{ manage_resultss }}" class="nav-link {% if request.path == manage_resultss %} active {% endif %}" <i
+                  class="nav-icon fas fa-user-graduate"></i>
+                  <p>
+                    View Results
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
                 {% url 'school:manage_sms' as broadcast %}
                 {% url 'school:broadcast' as sms %}
                 
@@ -330,7 +340,7 @@
   
           <a href="{{ manage_resultss }}"
             class="nav-link {% if request.path == manage_resultss %} active {% endif %}"
-            <i class="nav-icon fas fa-tasks"></i>
+            <i class="nav-icon fas fa-user-graduate"></i>
             <p>
               View Results
             </p>
@@ -414,6 +424,73 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
                   with font-awesome or any other icon font library -->
+        <li class=bg-white class="nav-item">
+          <!-- {% url 'student_home' as student_home %} -->
+          <!-- {% if request.path == student_home %} active {% endif %} -->
+          <a href="{% url 'school:principaldashboard' %}" class="nav-link ">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Home
+              {% comment %} <span class="right badge badge-danger">New</span> {% endcomment %}
+            </p>
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          {% url 'school:manage_staff' as manage_staff %}
+          {% url 'school:edit_staff' id as edit_staff %}
+          <a href="{{ manage_staff }}"
+            class="nav-link {% if request.path == manage_staff %} active {% endif %} {% if request.path == edit_staff %} active {% endif %}">
+            <i class="nav-icon fas fa-chalkboard-teacher"></i>
+            <p>
+              Manage Staff
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+                {% url 'school:manage_parent' as manage_parent %}
+                {% url 'school:edit_parent' parent.id as edit_parent %}
+                <a href="{{ manage_parent }}"
+                  class="nav-link {% if request.path == manage_parent %} active {% endif %} {% if request.path == edit_parent %} active {% endif %}">
+                  <i class="nav-icon fa fa-users"></i>
+                  <p>
+                    Manage Parent
+                  </p>
+                </a>
+        </li>
+        <li class="nav-item">
+          {% url 'school:manage_student' as manage_student %}
+          {% url 'school:edit_student' id as edit_student %}
+          <a href="{{ manage_student }}"
+            class="nav-link {% if request.path == manage_student %} active {% endif %} {% if request.path == edit_student %} active {% endif %}">
+            <i class="nav-icon fas fa-user-graduate"></i>
+            <p>
+              Manage Student
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          {% url 'school:manage_attendance' as manage_attendance %}
+          {% url 'school:create_attendance' as create_attendance %}
+          <a href="{{ manage_attendance }}"
+            class="nav-link {% if request.path == manage_attendance %} active {% endif %} {% if request.path == create_attendance %} active {% endif %}">
+            <i class="nav-icon fas fa-calendar-plus"></i>
+            <p>
+              Manage Attendance
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          {% url 'school:viewing_results' as manage_resultss %}
+        
+          <a href="{{ manage_resultss }}" class="nav-link {% if request.path == manage_resultss %} active {% endif %}" <i
+            class="nav-icon fas fa-user-graduate"></i>
+            <p>
+              View Results
+            </p>
+          </a>
+        </li>
+        <br>
         <li class=bg-white class="nav-item">
           <a href="{% url 'school:principaldashboard' %}" class="nav-link ">
             <i class="nav-icon fas fa-cog"></i>

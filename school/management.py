@@ -626,7 +626,7 @@ def add_staff(request):
                 message = client.messages.create(
                     to="+233" + staff.phone,
                     from_=TWILIO_PHONE_NUMBER,
-                    body="Dear" + " " + staff.Surname +" "+ staff.firstname + "," + " " + "your staff id is"+" " + staff.id + ".Thank you ---- MULAN SMART SCHOOL MANAGEMENT SYSTEM")
+                    body="Dear" + " " + staff.Surname +" "+ staff.firstname + "," + " " + "your staff id is"+" " + staff.id + " " + "and your password is password@12345" + " "+ ".Thank you ---- MULAN SMART SCHOOL MANAGEMENT SYSTEM")
             except IOError:
                 print('fail')
                 pass

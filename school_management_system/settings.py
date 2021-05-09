@@ -177,4 +177,4 @@ AWS_S3_OBJECT_PARAMETERS = {
 
 
 MEDIAFILES_LOCATION = 'media'
-DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+DEFAULT_FILE_STORAGE = 'school_management_system.custom_storages.MediaStorage'

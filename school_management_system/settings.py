@@ -171,8 +171,10 @@ AWS_S3_OBJECT_PARAMETERS = {
 
 # MEDIA_LOCATION = 'media'
 # MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 DEFAULT_S3_PATH = "media"
-DEFAULT_FILE_STORAGE = 'school_management_system.storage_backends.MediaStorage'
+
 MEDIA_ROOT = '/%s/' % DEFAULT_S3_PATH
 UPLOAD_DIR = MEDIA_ROOT
-MEDIA_URL = '//s3.amazonaws.com/%s/buckets/' % AWS_STORAGE_BUCKET_NAME
+file_overwrite = False
+MEDIA_URL = '//s3.amazonaws.com/%s/media/' % AWS_STORAGE_BUCKET_NAME

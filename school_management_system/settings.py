@@ -177,4 +177,4 @@ AWS_S3_OBJECT_PARAMETERS = {
 
 
 MEDIAFILES_LOCATION = 'media'
-DEFAULT_FILE_STORAGE = 'storage_backends.MediaStorage'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'

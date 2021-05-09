@@ -142,8 +142,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 DJANGORESIZED_DEFAULT_SIZE = [128, 128]
@@ -167,5 +167,8 @@ AWS_S3_CUSTOM_DOMAIN = os.getenv("AWS_S3_CUSTOM_DOMAIN")
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
+
+MEDIA_LOCATION = 'media'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
 
 DEFAULT_FILE_STORAGE = 'school_management_system.storage_backends.MediaStorage'

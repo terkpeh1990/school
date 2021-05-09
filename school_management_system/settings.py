@@ -180,9 +180,3 @@ MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'school_management_system.custom_storages.MediaStorage'
 
 
-# DEFAULT_S3_PATH = "media"
-
-MEDIA_ROOT = '/%s/' % MEDIAFILES_LOCATION
-UPLOAD_DIR = MEDIA_ROOT
-
-MEDIA_URL = '//s3.amazonaws.com/%s/media/' % AWS_STORAGE_BUCKET_NAME

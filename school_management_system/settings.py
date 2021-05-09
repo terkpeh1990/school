@@ -175,4 +175,4 @@ DEFAULT_S3_PATH = "media"
 DEFAULT_FILE_STORAGE = 'school_management_system.storage_backends.MediaStorage'
 MEDIA_ROOT = '/%s/' % DEFAULT_S3_PATH
 UPLOAD_DIR = MEDIA_ROOT
-MEDIA_URL = '//s3.amazonaws.com/%s/media/' % AWS_STORAGE_BUCKET_NAME
+MEDIA_URL = '//s3.amazonaws.com/%s/buckets/' % AWS_STORAGE_BUCKET_NAME
